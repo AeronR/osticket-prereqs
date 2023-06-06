@@ -238,15 +238,20 @@ In the osTicket browser select continue > fill out the fields > Install HeidiSQL
 <img src="https://imgur.com/1QRf9ul.png"
 </p>
 
+<p>
+ <img src="https://imgur.com/AcKSmMO.png"
+      </p>
+ 
 - Part 15: Testing the Log in:
 
 The final step! To make sure everything is working, simply log in via the websites below.
       
 Admin Login: http://localhost/osTicket/scp/login.php
-  
+ 
 End-User Login(where individuals can create tickets): http://localhost/osTicket/
-  
-  
-  
+
+<p>
+ <img src="https://imgur.com/vIF8hnm.png"
+      </p>
  
- 
+and Voila! osTicket from scratch!
