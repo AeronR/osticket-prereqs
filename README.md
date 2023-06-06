@@ -166,13 +166,13 @@ Run IIS as Admin > PHP Manager > Register New PHP Version > PHP Folder > PHP-CGI
   <img src="https://imgur.com/nWqubev.png"
        </p>
  
-> 'Enable or disable an extension' > enable php_imap.dll > enable php_intl.dll > enable php_opcache.dll 
+'Enable or disable an extension' > enable php_imap.dll > enable php_intl.dll > enable php_opcache.dll 
   
   <p>
    <img src="https://imgur.com/TOfSLsL.png"
         </p>
   
-> Go back to osTicket in browser > Refresh (now some red X's have turned green!)
+Go back to osTicket in browser > Refresh (now some red X's have turned green!)
    
   <p>
    <img src="https://imgur.com/nWpOzKk.png"
@@ -180,52 +180,77 @@ Run IIS as Admin > PHP Manager > Register New PHP Version > PHP Folder > PHP-CGI
  
  - Part 12: Rename ost-config.php & Changing Access Permissions:
  
- <sub>***Our goal is to change 'C:\inetpub\wwwroot\osTicket\include\ost-sampleconfig.php' into 'C:\inetpub\wwwroot\osTicket\include\ost-config.php'
+ <sub>***Our goal is to change 'C:\inetpub\wwwroot\osTicket\include\ost-sampleconfig.php' into 'C:\inetpub\wwwroot\osTicket\include\ost-config.php'***</sub>
   
-1.) Navigate to 'File Explorer' > 'This PC' > C:Drive > 'inetpub'> 'wwwroot' >osTicket > 'include' folder.
-2.) Scroll down within the 'include' folder until you find 'ost-sampleconfig
-3.) Rename to 'ost-config'.
-4.) Right click 'ost-config' file > 'properties' > 'Security' > 'Advanced'
-5.) Select 'Disable inheritance' > 'remove all permissions'
-6.) Add permissions: selct 'add' > 'select a principal' > type 'Everyone' & 'check names' > 'Full Control' > 'Apply' and 'OK'
+**Follow _THESE_ Steps::** File Explorer > This PC > C:drive > inetpub > wwwroot > osTicket 'include' folder 
+   
+ <p>
+  <img src="https://imgur.com/ZqCssEO.png"
+       </p>
+   
+rename the 'ost-sampleconfig.php' folder to 'ost-config' > select properties on the 'ost-config' file 
+  
+  <p>
+   <img src="https://imgur.com/z9yduFj.png"
+        </p>
+  
+Security > Advanced
+   
+   <p>
+    <img src="https://imgur.com/ogTvHdq.png"
+         </p>
+
+<sub>***osTicket needs to interact with this file in order to run and since we don't know what user it's gong to use, we are going to set the file permissions so that anyone can access it. This will prevent issues when attempting to connect to osTicket***</sub>
+    
+Disable inheritance > remove all permissions
+    
+<p>
+ <img src="https://imgur.com/WcXqEBo.png"
+      </p>
+  
+Add > Select a principal > Everyone > Check Names > Full Control > Apply > OK
+ 
+ <p>
+  <img src="https://imgur.com/qChfAaM.png"
+       </p>
   
 - Part 13: Continue Setting up osTicket in the Browser:
- 
-1.) In the browser, select 'continue'
-2.) Fill in the fields
-3.) Install HeidiSQL: https://docs.google.com/document/d/1WovrX2DaS9xkfaSr4LXyB4YnnWpXIgPCMMbbfgHmGVw/edit
+  
+In the osTicket browser select continue > fill out the fields > Install HeidiSQL: https://docs.google.com/document/d/1WovrX2DaS9xkfaSr4LXyB4YnnWpXIgPCMMbbfgHmGVw/edit
 
-Follow these steps when installing HeidiSQL:
+<sub>***HeidiSQL is a ree and open-source database management tool. It provides a GUI for managing and interacting with various database systems. With HeidiSQL, users can perofrm tasks such as executing quieries, managing database structures, importing and exporting data, and performing database administration tasks. It offers a user-friendly interface and supports advanced features like SSH tunneling and SSL encryption, making it a popular choice for developers and database admins***</sub>
+  
+**Follow _THESE_ steps for installing HeidiSQL:** Next on everything > Install > Finish
+  
+  <p>
+   <img src="https://imgur.com/WrrnjOA.png"
+        </p>
 
--Open the installation file for HeidiSQL
+  (another window of 'Launch Heidi will open) 
+  
+  Click new > username: 'root', pw:'Password1' 
+   
+    <p>
+  <img src="https://imgur.com/fx1TTOm.png"
+       </p>
+   
+  Open > Create a new databased called 'osTicket'> Install now
+  
+     <p>
+      <img src="https://imgur.com/TNwYzdy.png"
+           </p>
+      
+     <p>
+      <img src="https://imgur.com/1QRf9ul"
+           </p>
 
--Select 'Next' on everything > 'Install' > 'Finish'
- 
--Another window of 'Launch Heidi' Will open > click 'New' because we are going to create a new connection to the Database
-  
--The username:'root', pw: 'Password1' > select 'Open'
-  
--Now we have our connection to MySQL server > create a new database called 'osTicket'
-  
-4.) We can now finish setting up osTicket in the browser:
- 
--Username: 'root', pw: 'Password1'
-
--Database name: 'osTicket'
-  
--'Install now'
-
-- Part 14: Clean up
-  
-1.) Delete the 'Set Up' folder in 'C:inetpub\wwwroot\osTicket\setup
-  
-2.) Set permissions to 'Read Only' within C:\inetpub\wwwroot\osticket\include\ost-config.php
-  
 - Part 15: Testing the Log in:
 
--Admin Login: http://localhost/osTicket/scp/login.php
+The final step! To make sure everything is working, simply log in via the websites below.
+      
+Admin Login: http://localhost/osTicket/scp/login.php
   
--End-User Login(where individuals can create tickets): http://localhost/osTicket/
+End-User Login(where individuals can create tickets): http://localhost/osTicket/
   
   
   
