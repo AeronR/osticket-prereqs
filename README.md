@@ -4,7 +4,7 @@
 
 <h1>osTicket - Prerequisites and Installation</h1>
 
-In this document I will be demonstrating how to create a osTicketing system from scratch with the use of Azure Virtual Machines
+In this document I will be demonstrating how to create the osTicketing system from scratch with the use of Azure Virtual Machines
 
 ### Benefits of knowing the ticketing system:
 
@@ -57,7 +57,7 @@ Common Gateway Interface(CGI) needs to be enabled on IIS in order to install osT
 
 How to Install and enable ISS in Windows w/ CGI:
 
- 1.) Control Panel > Programs > Turn Windows features on & off
+1.) Control Panel > Programs > Turn Windows features on & off
   
 2.) World Wide Web Services > Application Development Features > [x] CGI > [x] Common HTTP Features
 
@@ -75,38 +75,63 @@ How to Install and enable ISS in Windows w/ CGI:
   
 - Part 2: Install PHP Manager for IIS:
   https://drive.google.com/file/d/1RHsNd4eWIOwaNpj3JW4vzzmzNUH86wY_/view
+
+  <sub>***PHP Manager is a software tool for Windows servers running IIS. It provides a user-friendly interface to install, configure, and manage PHP installations. It allows administrators to customize PHP settings, manage extensions, handle errors, and optimize server resouces***</sub>
   
 - Part 3: Download and Install Rewrite Module:
   https://drive.google.com/file/d/1tIK9GZBKj1JyUP87eewxgdNqn9pZmVmY/view?usp=share_link
   
-- Part 4: Create a Directory for PHP on the local C:drive.
-
-1.) Open 'File Explorer' > 'My PC' > C:drive > 'New' > 'Folder' > name the folder 'PHP'
+  <sub>***The Rewrite Module is a crucial component of web servers that allows for the manipulation of URLs. For the osTicket, it plays an important role in creating user-friendly and search engine optimized URLs for the system's support ticket pages. This enhances the user experience by providing clear and readable links, making it easier for users to navigate and remember specific ticket URLs***</sub>
+  
+- Part 4: Create a Directory for PHP on the local C:drive
   
 - Part 5: Download PHP 7.3.8 and Unzip Contents into C:PHP
   https://drive.google.com/file/d/1snNMtLdCOpMtkCyD4mvl9yOOmvVIp9fP/view?usp=share_link
-  
-1.) Use the link provided and download the PHP 7.3.8(Leave all files as they are, we will extract them onto the PHP folder after.
- 
-2.) Locate the file and extract it to 'C:PHP folder'.
- 
+   
 - Part 6: Download and Install C++ Restributable:
  https://drive.google.com/file/d/1s1OsGF3-ioO0_9LYizPRiVuIkb3lFJgH/view?usp=share_link
+  
+  <sub>***Microsoft C++ is required for osTicket because osTicket relies on certain libraries and dependencies that are provided by the Microsoft C++ Redistributable package. By installing it, you ensure that your system has the necessary components to run osTicket smoothly and without any compatability issues***</sub>
  
 - Part 7: Downoad and Install MySQL Server:
  https://drive.google.com/file/d/1_OWh9p7VQLcrB0q_V7qT8yHl0xo5gv7z/view?usp=share_link
+  
+ **Follow _THIS_ installation process for MySQL:** Typical Install > Standard Configuration > Username: 'root' > pw: 'Password1' > Execute > Finish
+  
+<p>
+  <img src="https://imgur.com/sRJbrfJ.png"
+       </p>
+
+ <p>
+  <img src="https://imgur.com/bR9u2uL.png"
+       </p>
+  
+  <p>
+   <img src="https://imgur.com/90nYw1A.png"
+        </p>
+                                         
+  <sub>***MySQL is an open-source relational database management system (RDBMS) that is commonly used to store and manage data for web applications. For the osTicket, MySQL is needed as the underlying database engine for storing and retrieving support ticket data, user information, and other related info. It provides a secure and reliable storage solution for osTicket, allowing efficient management of large volumes of data and ensuring data integrity and consistency***</sub>
  
- 1.) Follow THIS installation process for MySQL:
- -Typical Install
- -Standard Configuration
- -Username: 'root' pw: 'Password1'
- -Exectute and Finish
  
-- Part 8: Confgiue ISS as Admin and Register PHP
-1.) Type 'IIS' in the search bar on Windows Desktop > Right click to 'Run as Administrator'
-2.) Double click PHP manager > 'Register New PHP version'
-3.) Click the three dots icon to browse > 'PHP' folder > 'PHP-CGI' > select 'OK'
-4.) Click 'Restart' so the system can reset with PHP now added.
+- Part 8: Confgiue IIS as Admin and Register PHP
+
+How to:
+   
+Run IIS as Admin > PHP Manager > Register New PHP Version > PHP Folder > PHP-CGI > OK > Restart and reload the IIS
+   
+<p>
+ <img src="https://imgur.com/UDQHyN1.png"
+      </p>
+ 
+ <p>
+  <img src="https://imgur.com/VJbbxE5.png"
+       </p>
+  
+  <p>
+   <img src="https://imgur.com/jPB9YWg.png"
+        </p>
+   
+   <sub>***In order to use PHP on a web server, you need to register it. Registering PHP involves configuring the web server software to recognize and process PHP files. This is important because PHP is a server-side scripting language, and registering it ensures that the server can correctly interpret and execute PHP code embedded within web pages. By registering PHP, you enable the server to dynamically generate and serve web content based on PHP scripts, allowing you to build dynamic and interactive websites and applications***</sub>
  
 - Part 9: Download and Install osTicket:
  https://drive.google.com/file/d/1VeVXKlzHDRjeaVUL99ptq7qYbrbXdFxJ/view?usp=share_link
