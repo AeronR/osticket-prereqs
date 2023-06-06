@@ -147,8 +147,38 @@ Common Gateway Interface(CGI) needs to be enabled on IIS in order to install osT
 3.) Install HeidiSQL: https://docs.google.com/document/d/1WovrX2DaS9xkfaSr4LXyB4YnnWpXIgPCMMbbfgHmGVw/edit
 
 Follow these steps when installing HeidiSQL:
--Open in 
+
+-Open the installation file for HeidiSQL
+
+-Select 'Next' on everything > 'Install' > 'Finish'
  
+-Another window of 'Launch Heidi' Will open > click 'New' because we are going to create a new connection to the Database
+  
+-The username:'root', pw: 'Password1' > select 'Open'
+  
+-Now we have our connection to MySQL server > create a new database called 'osTicket'
+  
+4.) We can now finish setting up osTicket in the browser:
+ 
+-Username: 'root', pw: 'Password1'
+
+-Database name: 'osTicket'
+  
+-'Install now'
+
+- Part 14: Clean up
+  
+1.) Delete the 'Set Up' folder in 'C:inetpub\wwwroot\osTicket\setup
+  
+2.) Set permissions to 'Read Only' within C:\inetpub\wwwroot\osticket\include\ost-config.php
+  
+- Part 15: Testing the Log in:
+
+-Admin Login: http://localhost/osTicket/scp/login.php
+  
+-End-User Login(where individuals can create tickets): http://localhost/osTicket/
+  
+  
   
  
  
