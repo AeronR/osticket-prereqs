@@ -6,7 +6,7 @@
 
 In this document I will be demonstrating how to create a osTicketing system from scratch with the use of Azure Virtual Machines
 
-Benefits of knowing the ticketing system:
+### Benefits of knowing the ticketing system:
 
 1.) Organization and prioritization of requests.
 
@@ -22,9 +22,6 @@ Benefits of knowing the ticketing system:
 
 7.) Increase customer satisfaction. 
 
-
-<br />
-
 <h2>Environments and Technologies Used</h2>
 
 - Microsoft Azure (Virtual Machines/Compute)
@@ -33,7 +30,7 @@ Benefits of knowing the ticketing system:
 
 <h2>Operating Systems Used </h2>
 
-- Windows 10</b> (21H2)
+- Windows 10 Pro (22H2)
 
 <h2>List of Prerequisites</h2>
 
@@ -46,12 +43,7 @@ Benefits of knowing the ticketing system:
 
 <p>
  
-First things first, I created a Windows 10 Virtual Machine through Azure. 
-
-<sub>***These installation steps do not include how to create a Virtual Machine***</sub>
-  
-The following images are through the Windows VM already.
-
+<sub>***These installation steps do not include how to create a Virtual Machine on Azure***</sub>
 </p>
 
 <p>
@@ -60,18 +52,26 @@ The following images are through the Windows VM already.
 
 <sub>***Internet Information Services(IIS) is a web server that allows you to host websites and web applications on a Windows-based server. With IIS, you can create and manage websites, handle incoming web request, and serve web pages to users over the internet. It provides a platform for hosting and running various types of websites.***</sub>
  
-1.) Click the Start Menu and type in Control Panel under the search bar.
-  
-2.) Once in the Control Panel, select 'Programs' > 'Turn Windows Features On & Off'.
-  
-3.) Enable [X] 'IIS' > Expand [+] 'World Wide Web Services' > [+] 'Application Developer' > [X] CGI
-
-  <sub>***CGI allows us to install the PHP manager. The PHP manager will then allow us to install osTicket. 
+ <sub>***CGI allows us to install the PHP manager. The PHP manager will then allow us to install osTicket. 
 Common Gateway Interface(CGI) needs to be enabled on IIS in order to install osTicket because osTicket relies on CGI scripts to process and handle certain web requests.***</sub>
 
-4.) Once IIS has been enabled and installed, we can check that everything is working by typing '127.0.0.1' into the search bar of our web browser.
+How to Install and enable ISS in Windows w/ CGI:
+
+ 1.) Control Panel > Programs > Turn Windows features on & off
+  
+2.) World Wide Web Services > Application Development Features > [x] CGI > [x] Common HTTP Features
+
+<p>
+ <img src="https://imgur.com/7psi7z3.png"
+      </p>
+
+3.) Once IIS has been enabled and installed, we can check that everything is working by typing '127.0.0.1' into the search bar of our web browser.
   
 <sub>***'127.0.0.1' is the loopback address for our local machine. The loopback address refers to the computer itself, which will allow you to access the web server or any other services running on your own machine***</sub>
+ 
+ <p>
+  <img src="https://imgur.com/IBMV2X1.png"
+       </p>
   
 - Part 2: Install PHP Manager for IIS:
   https://drive.google.com/file/d/1RHsNd4eWIOwaNpj3JW4vzzmzNUH86wY_/view
