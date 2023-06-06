@@ -220,29 +220,23 @@ In the osTicket browser select continue > fill out the fields > Install HeidiSQL
 
 <sub>***HeidiSQL is a ree and open-source database management tool. It provides a GUI for managing and interacting with various database systems. With HeidiSQL, users can perofrm tasks such as executing quieries, managing database structures, importing and exporting data, and performing database administration tasks. It offers a user-friendly interface and supports advanced features like SSH tunneling and SSL encryption, making it a popular choice for developers and database admins***</sub>
   
-**Follow _THESE_ steps for installing HeidiSQL:** Next on everything > Install > Finish
-  
-  <p>
-   <img src="https://imgur.com/WrrnjOA.png"
-        </p>
+**Follow _THESE_ steps for installing HeidiSQL:** Next on everything > Install > Finish (another window of 'Launch Heidi will open) > Click new > username: 'root', pw:'Password1' > Open > Create a new databased called 'osTicket'> Install now
 
-  (another window of 'Launch Heidi will open) 
-  
-  Click new > username: 'root', pw:'Password1' 
+<p>
+<img src="https://imgur.com/WrrnjOA.png"
+</p>
    
-    <p>
-  <img src="https://imgur.com/fx1TTOm.png"
-       </p>
-   
-  Open > Create a new databased called 'osTicket'> Install now
+<p>
+<img src="https://imgur.com/fx1TTOm.png"
+</p>
   
-     <p>
-      <img src="https://imgur.com/TNwYzdy.png"
-           </p>
+<p>
+<img src="https://imgur.com/TNwYzdy.png"
+</p>
       
-     <p>
-      <img src="https://imgur.com/1QRf9ul"
-           </p>
+<p>
+<img src="https://imgur.com/1QRf9ul.png"
+</p>
 
 - Part 15: Testing the Log in:
 
