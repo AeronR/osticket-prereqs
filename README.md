@@ -86,7 +86,69 @@ Common Gateway Interface(CGI) needs to be enabled on IIS in order to install osT
 - Part 5: Download PHP 7.3.8 and Unzip Contents into C:PHP
   https://drive.google.com/file/d/1snNMtLdCOpMtkCyD4mvl9yOOmvVIp9fP/view?usp=share_link
   
+1.) Use the link provided and download the PHP 7.3.8(Leave all files as they are, we will extract them onto the PHP folder after.
+ 
+2.) Locate the file and extract it to 'C:PHP folder'.
+ 
+- Part 6: Download and Install C++ Restributable:
+ https://drive.google.com/file/d/1s1OsGF3-ioO0_9LYizPRiVuIkb3lFJgH/view?usp=share_link
+ 
+- Part 7: Downoad and Install MySQL Server:
+ https://drive.google.com/file/d/1_OWh9p7VQLcrB0q_V7qT8yHl0xo5gv7z/view?usp=share_link
+ 
+ 1.) Follow THIS installation process for MySQL:
+ -Typical Install
+ -Standard Configuration
+ -Username: 'root' pw: 'Password1'
+ -Exectute and Finish
+ 
+- Part 8: Confgiue ISS as Admin and Register PHP
+1.) Type 'IIS' in the search bar on Windows Desktop > Right click to 'Run as Administrator'
+2.) Double click PHP manager > 'Register New PHP version'
+3.) Click the three dots icon to browse > 'PHP' folder > 'PHP-CGI' > select 'OK'
+4.) Click 'Restart' so the system can reset with PHP now added.
+ 
+- Part 9: Download and Install osTicket:
+ https://drive.google.com/file/d/1VeVXKlzHDRjeaVUL99ptq7qYbrbXdFxJ/view?usp=share_link
+ 
+- Part 10: Downloading osTicket and Setting up IIS:
+ 1.) Once osTicket has been downloaded, open 2 windows of 'File Explorer'. We will be extracting and copying the 'upload' Folder to 'c:\inetpub\wwwwroot:'
+-File Explorer 1: Navigate to 'Downloads' > osTicket > Unzip contents > this is where you will see the 'upload' folder.
+-File Explorer 2: My PC > C:drive > inetpub > wwwroot
+-Drag and drop 'upload' folder in 'wwwroot'
+-Rename the 'upload' folder to 'osTicket'
+-Go back to IIS to load the osTicket website
+-Once IIS has been opened, navigate to 'VM-osTicket' > Expand [+] Sites > Expand[+] Default Web Site > Select 'osTicket' > Select 'browse *.80' which will then opne the osTicket installer website.
+ 
+- Part 11: Enabling IIS extensions:
+ 1.) Navigate back to 'IIS' > select 'VM-osTicket' > [+] 'sites' > [+] 'Default Web Site' > 'osTicket' > 'PHP Mangager'
+ 2.) Select 'Enable or disable an extension'
+ 3) Enable the following extensions:
+ php_impa.dll
+ php.intl.dll
+ php.opcache.dll
+ 4.) Go back to the osTicket in the browser > Refresh > you'll notice that some red X's has now turned green.
+ 
+ - Part 12: Rename ost-config.php & Changing Access Permissions:
+ 
+ <sub>***Our goal is to change 'C:\inetpub\wwwroot\osTicket\include\ost-sampleconfig.php' into 'C:\inetpub\wwwroot\osTicket\include\ost-config.php'
   
+1.) Navigate to 'File Explorer' > 'This PC' > C:Drive > 'inetpub'> 'wwwroot' >osTicket > 'include' folder.
+2.) Scroll down within the 'include' folder until you find 'ost-sampleconfig
+3.) Rename to 'ost-config'.
+4.) Right click 'ost-config' file > 'properties' > 'Security' > 'Advanced'
+5.) Select 'Disable inheritance' > 'remove all permissions'
+6.) Add permissions: selct 'add' > 'select a principal' > type 'Everyone' & 'check names' > 'Full Control' > 'Apply' and 'OK'
   
+- Part 13: Continue Setting up osTicket in the Browser:
+ 
+1.) In the browser, select 'continue'
+2.) Fill in the fields
+3.) Install HeidiSQL: https://docs.google.com/document/d/1WovrX2DaS9xkfaSr4LXyB4YnnWpXIgPCMMbbfgHmGVw/edit
+
+Follow these steps when installing HeidiSQL:
+-Open in 
+ 
   
-  
+ 
+ 
