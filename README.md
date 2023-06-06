@@ -96,6 +96,8 @@ How to Install and enable ISS in Windows w/ CGI:
 - Part 7: Downoad and Install MySQL Server:
  https://drive.google.com/file/d/1_OWh9p7VQLcrB0q_V7qT8yHl0xo5gv7z/view?usp=share_link
   
+<sub>***MySQL is an open-source relational database management system (RDBMS) that is commonly used to store and manage data for web applications. For the osTicket, MySQL is needed as the underlying database engine for storing and retrieving support ticket data, user information, and other related info. It provides a secure and reliable storage solution for osTicket, allowing efficient management of large volumes of data and ensuring data integrity and consistency***</sub>
+  
  **Follow _THIS_ installation process for MySQL:** Typical Install > Standard Configuration > Username: 'root' > pw: 'Password1' > Execute > Finish
   
 <p>
@@ -110,13 +112,11 @@ How to Install and enable ISS in Windows w/ CGI:
    <img src="https://imgur.com/90nYw1A.png"
         </p>
                                          
-  <sub>***MySQL is an open-source relational database management system (RDBMS) that is commonly used to store and manage data for web applications. For the osTicket, MySQL is needed as the underlying database engine for storing and retrieving support ticket data, user information, and other related info. It provides a secure and reliable storage solution for osTicket, allowing efficient management of large volumes of data and ensuring data integrity and consistency***</sub>
- 
- 
-- Part 8: Confgiue IIS as Admin and Register PHP
-
-How to:
+- Part 8: Configure IIS as Admin and Register PHP
    
+<sub>***In order to use PHP on a web server, you need to register it. Registering PHP involves configuring the web server software to recognize and process PHP files. This is important because PHP is a server-side scripting language, and registering it ensures that the server can correctly interpret and execute PHP code embedded within web pages. By registering PHP, you enable the server to dynamically generate and serve web content based on PHP scripts, allowing you to build dynamic and interactive websites and applications***</sub>
+
+**Follow _these_ steps:**
 Run IIS as Admin > PHP Manager > Register New PHP Version > PHP Folder > PHP-CGI > OK > Restart and reload the IIS
    
 <p>
@@ -130,29 +130,53 @@ Run IIS as Admin > PHP Manager > Register New PHP Version > PHP Folder > PHP-CGI
   <p>
    <img src="https://imgur.com/jPB9YWg.png"
         </p>
-   
-   <sub>***In order to use PHP on a web server, you need to register it. Registering PHP involves configuring the web server software to recognize and process PHP files. This is important because PHP is a server-side scripting language, and registering it ensures that the server can correctly interpret and execute PHP code embedded within web pages. By registering PHP, you enable the server to dynamically generate and serve web content based on PHP scripts, allowing you to build dynamic and interactive websites and applications***</sub>
  
 - Part 9: Download and Install osTicket:
  https://drive.google.com/file/d/1VeVXKlzHDRjeaVUL99ptq7qYbrbXdFxJ/view?usp=share_link
+   
+<sub>***osTicket is a ticketing system used by businesses to manage customer support requests. It is a centralized platofrm that helps organize, track, and resolve customer issues or tikets efficiently. osTicket is useful because it enables businesses to effectively manage and prioritize customer inquires, ensuring timely resolution and better customer satisfaction. It facilitates communicated between support agents and customers, streamlines ticket management, and ehances overall customer support processes***</sub>
  
 - Part 10: Downloading osTicket and Setting up IIS:
- 1.) Once osTicket has been downloaded, open 2 windows of 'File Explorer'. We will be extracting and copying the 'upload' Folder to 'c:\inetpub\wwwwroot:'
--File Explorer 1: Navigate to 'Downloads' > osTicket > Unzip contents > this is where you will see the 'upload' folder.
--File Explorer 2: My PC > C:drive > inetpub > wwwroot
--Drag and drop 'upload' folder in 'wwwroot'
--Rename the 'upload' folder to 'osTicket'
--Go back to IIS to load the osTicket website
--Once IIS has been opened, navigate to 'VM-osTicket' > Expand [+] Sites > Expand[+] Default Web Site > Select 'osTicket' > Select 'browse *.80' which will then opne the osTicket installer website.
+  
+**Follow _THESE_ steps:** Once osTicket has been downoaded > Open two windows of File Explorer (we are going to extract and copy 'Upload' folder to c:\inetpub\wwwroot:)
+   
+ **_File Explorer 1_:** Downloads > osTicket > Unzip contents (You will then see the 'Upload' folder)
+   
+<p>
+ <img src="https://imgur.com/4ksVHym.png"
+      </p>
+   
+**_File Explorer 2_:** My PC > C:Drive > Inetpub > wwwroot > Drag and drop 'Upload' foder in wwwroot > rename 'Upload' folder to 'osTicket'
  
+ <p>
+  <img src="https://imgur.com/MJg23g6.png"
+                                         </p>
+                                         
+**Go back to IIS:** VM-osTicket > [+]sites > [+]Default Web Site > 'osTicket' > Browse .80 (this will then load up the osTicket website, but notice the red x marks, we just need to enable some extensions to get it up and working)
+                       
+<p>
+   <img src="https://imgur.com/KFGWSkq.png"
+        </p>
+                                                                           
 - Part 11: Enabling IIS extensions:
- 1.) Navigate back to 'IIS' > select 'VM-osTicket' > [+] 'sites' > [+] 'Default Web Site' > 'osTicket' > 'PHP Mangager'
- 2.) Select 'Enable or disable an extension'
- 3) Enable the following extensions:
- php_impa.dll
- php.intl.dll
- php.opcache.dll
- 4.) Go back to the osTicket in the browser > Refresh > you'll notice that some red X's has now turned green.
+
+ **Follow _THESE_ steps:** IIS > VM-osTicket > [+] sites >[+] Default Web Site > osTicket > PHP Manager
+ 
+ <p>
+  <img src="https://imgur.com/nWqubev.png"
+       </p>
+ 
+> 'Enable or disable an extension' > enable php_imap.dll > enable php_intl.dll > enable php_opcache.dll 
+  
+  <p>
+   <img src="https://imgur.com/TOfSLsL.png"
+        </p>
+  
+> Go back to osTicket in browser > Refresh (now some red X's have turned green!)
+   
+  <p>
+   <img src="https://imgur.com/nWpOzKk.png"
+        </p>
  
  - Part 12: Rename ost-config.php & Changing Access Permissions:
  
